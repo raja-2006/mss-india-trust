@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0.98 0.008 255;
+    --foreground: 0.13 0.035 258;
+    --card: 1 0 0;
+    --card-foreground: 0.13 0.035 258;
+    --popover: 1 0 0;
+    --popover-foreground: 0.13 0.035 258;
+    --primary: 0.28 0.155 258;
+    --primary-foreground: 0.98 0.005 250;
+    --secondary: 0.46 0.13 148;
+    --secondary-foreground: 0.98 0.005 145;
+    --muted: 0.93 0.02 255;
+    --muted-foreground: 0.46 0.05 255;
+    --accent: 0.46 0.13 148;
+    --accent-foreground: 0.98 0.005 145;
+    --destructive: 0.54 0.22 22;
+    --destructive-foreground: 0.98 0 0;
+    --border: 0.87 0.03 255;
+    --input: 0.87 0.03 255;
+    --ring: 0.28 0.155 258;
+    --radius: 0.6rem;
+    --chart-1: 0.28 0.155 258;
+    --chart-2: 0.46 0.13 148;
+    --chart-3: 0.72 0.14 148;
+    --chart-4: 0.55 0.18 258;
+    --chart-5: 0.54 0.22 22;
+    --sidebar: 0.97 0.01 255;
+    --sidebar-foreground: 0.13 0.035 258;
+    --sidebar-primary: 0.28 0.155 258;
+    --sidebar-primary-foreground: 0.98 0.005 250;
+    --sidebar-accent: 0.93 0.02 255;
+    --sidebar-accent-foreground: 0.13 0.035 258;
+    --sidebar-border: 0.87 0.03 255;
+    --sidebar-ring: 0.28 0.155 258;
+  }
+
+  .dark {
+    --background: 0.10 0.03 258;
+    --foreground: 0.95 0.01 250;
+    --card: 0.13 0.03 258;
+    --card-foreground: 0.95 0.01 250;
+    --popover: 0.13 0.03 258;
+    --popover-foreground: 0.95 0.01 250;
+    --primary: 0.55 0.155 258;
+    --primary-foreground: 0.10 0.03 258;
+    --secondary: 0.52 0.13 148;
+    --secondary-foreground: 0.10 0.03 258;
+    --muted: 0.18 0.04 258;
+    --muted-foreground: 0.62 0.06 255;
+    --accent: 0.52 0.13 148;
+    --accent-foreground: 0.10 0.03 258;
+    --destructive: 0.58 0.22 22;
+    --destructive-foreground: 0.98 0 0;
+    --border: 0.22 0.05 258;
+    --input: 0.22 0.05 258;
+    --ring: 0.55 0.155 258;
+    --sidebar: 0.12 0.03 258;
+    --sidebar-foreground: 0.95 0.01 250;
+    --sidebar-primary: 0.55 0.155 258;
+    --sidebar-primary-foreground: 0.10 0.03 258;
+    --sidebar-accent: 0.18 0.04 258;
+    --sidebar-accent-foreground: 0.95 0.01 250;
+    --sidebar-border: 0.22 0.05 258;
+    --sidebar-ring: 0.55 0.155 258;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply py-16 md:py-24 px-4;
+  }
+
+  .container-narrow {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-blue-green {
+    background: linear-gradient(135deg, oklch(0.28 0.155 258) 0%, oklch(0.38 0.14 200) 50%, oklch(0.46 0.13 148) 100%);
+  }
+
+  .emergency-gradient {
+    background: linear-gradient(135deg, oklch(0.48 0.22 22) 0%, oklch(0.38 0.18 22) 100%);
+  }
+}
